@@ -1,0 +1,31 @@
+.pagination-container
+  display: flex
+  margin-top: 24px
+  flex-flow: row
+  justify-content: center
+
+
+  &__limit-select
+    margin-left: 16px
+
+
+  &__mobile-pagination
+    display: flex
+    flex-flow: row
+    align-content: center
+    align-items: center
+    justify-content: center
+    margin-bottom: 16px
+
+  @media (max-width: 600px)
+    flex-flow: column
+    justify-content: center
+
+    &__limit-select
+      justify-self: center
+      align-content: center
+      margin: 0 auto
+      width: 50%
+
+
+
