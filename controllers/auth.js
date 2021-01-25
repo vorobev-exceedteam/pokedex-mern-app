@@ -107,8 +107,7 @@ exports.google = async (req, res, next) => {
       refreshJWT: tokens[1]
     });
     res.render('authenticated', {
-      user: userData,
-      targetOrigin: 'http://localhost:3000'
+      user: userData
     });
   } catch (e) {
     return next(e);

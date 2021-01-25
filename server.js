@@ -9,6 +9,7 @@ const errorHandler = require('./middleware/errorHandler');
 const configurePassport = require('./config/passport');
 const authRoute = require('./routes/auth');
 const pokemonRoute = require('./routes/pokemon');
+const path = require('path');
 const { expressJWTK } = require('./middleware/security/express-jwtk');
 
 const app = express();
@@ -33,10 +34,13 @@ app.use(
   '/pokeapi/*',
   createProxyMiddleware({
     target: 'http://pokeapi.co/api/v2',
-    pathRewrite: {'^/pokeapi' : ''},
+    pathRewrite: { '^/pokeapi': '' },
     changeOrigin: true
   })
 );
+
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', 'hbs');
@@ -45,7 +49,10 @@ app.use(expressJWTK(keyvClient));
 app.use(configurePassport());
 app.use('/api/auth', authRoute);
 app.use('/api/pokemon', pokemonRoute);
-
+app.use(express.static(path.join(__dirname, 'client', 'build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
 app.use('/api/*', (req, res, next) =>
   next(new NotFound('Route does not exist'))
 );
