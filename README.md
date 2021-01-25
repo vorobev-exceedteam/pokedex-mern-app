@@ -55,8 +55,8 @@ Then you should go to localhost:{PORT that you set in .env file}.
 
 * Filter of pokemons by stats, weaknesses, abilities;
 
-* More information about pokemon (like evolution, location etc.);
+* More information about pokemon (like evolution, location, etc.);
 
 * Email confirmation;
 
-* More authentication services (Like Facebook, Twitter etc.).
+* More authentication services (like Facebook, Twitter, etc.).
