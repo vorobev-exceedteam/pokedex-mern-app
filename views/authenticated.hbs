@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authenticated</title>
+  </head>
+  <body>
+    Authenticated successfully!
+    <script type="text/javascript">
+        var opener = window.opener;
+        opener.postMessage(JSON.parse('{{{user}}}'), '{{targetOrigin}}');
+        window.close();
+    </script>
+  </body>
+</html>

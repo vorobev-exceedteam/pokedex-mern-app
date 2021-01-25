@@ -1,0 +1,54 @@
+{
+  "name": "pokemon-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "start": "node ./server.js",
+    "start-dev": "nodemon ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@keyv/redis": "^2.1.2",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "http-proxy-middleware": "^1.0.6",
+    "joi": "^17.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-keyv": "github:vorobev-exceedteam/jwt-keyv#master",
+    "keyv": "^4.0.3",
+    "mongoose": "^5.10.17",
+    "passport": "^0.4.1",
+    "passport-custom": "^1.1.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "helmet": "^4.3.1",
+    "mongodb-memory-server": "^6.9.2",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1",
+    "superagent": "^6.1.0",
+    "supertest": "^6.0.1"
+  },
+  "engines": {
+    "node": "14.15.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
