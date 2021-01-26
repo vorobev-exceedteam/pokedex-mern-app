@@ -10,7 +10,7 @@ If you want to run this project locally, you should add .env files with configur
 
 ### `npm run start`
 
-After that, you should go to localhost:{PORT that you set in .env file}.
+After that, you should go to http://localhost:{PORT that you set in .env file}.
 
 # Environment Variables
 
