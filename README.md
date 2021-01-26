@@ -2,7 +2,7 @@
 Demo is available [here](https://pokedex-pokeapi-mern.herokuapp.com/).
 
 # How to run
-If you want to run this project locally, you should add .env files with configured variables for a server and client, type following commands:
+If you want to run this project locally, you should add .env files with configured variables for a server and client, then type following commands:
 
 ### `npm install`
 
